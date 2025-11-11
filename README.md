@@ -42,5 +42,3 @@ This responsive and interactive portfolio website is designed to present persona
 - **Animations:** Elements appear with smooth fade-in effects using Intersection Observer  
 
 
-   ```bash
-   git clone https://github.com/DulanDhanush/Portfolio-Website.git
