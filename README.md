@@ -45,7 +45,8 @@ This responsive and interactive portfolio website is designed to present persona
 
 Desktop view:
 
-<img width="1920" height="1080" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/0c6d15e3-f538-43bd-98b1-7034a6e3bcb8" />
+<img width="1917" height="867" alt="image" src="https://github.com/user-attachments/assets/c994bdc5-56f7-428c-9431-94f1fd120bfa" />
+
 
 
 
