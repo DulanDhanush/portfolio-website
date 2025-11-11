@@ -130,6 +130,7 @@ const initTypingAnimation = () => {
     
     // Start the typing animation
     setTimeout(type, newTextDelay + 250);
+    
 };
 
 // Form submission handling
@@ -188,29 +189,6 @@ const initContactForm = () => {
 };
 
 
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const submitBtn = this.querySelector('input[type="submit"]');
-        const originalText = submitBtn.value;
-        
-        // Show loading state
-        submitBtn.value = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Formspree will handle the submission
-        // You can add additional validation here if needed
-        
-        // Simulate success for demo (remove this in production)
-        setTimeout(() => {
-            showMessage('Thank you for your message! I will get back to you soon.', 'success');
-            contactForm.reset();
-            submitBtn.value = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
-    });
-};
-
 // Set current year in footer
 const setCurrentYear = () => {
     const yearElement = document.getElementById('current-year');
@@ -263,7 +241,6 @@ window.addEventListener('resize', () => {
         document.body.style.overflow = '';
     }
 });
-
 
 
 
