@@ -41,4 +41,16 @@ This responsive and interactive portfolio website is designed to present persona
 - **Responsive Design:** Works seamlessly across different screen sizes  
 - **Animations:** Elements appear with smooth fade-in effects using Intersection Observer  
 
+## 📸 Screenshots
+
+Desktop view:
+
+<img width="1920" height="1080" alt="Screenshot (26)" src="https://github.com/user-attachments/assets/4f753c6e-655e-448c-a734-43e7fb3d0eec" />
+
+
+Mobile view:
+
+<img width="642" height="882" alt="image" src="https://github.com/user-attachments/assets/9c8c262c-f3ec-4add-b1a9-32d4651f0f52" />
+
+
 
