@@ -133,31 +133,60 @@ const initTypingAnimation = () => {
 };
 
 // Form submission handling
+// Form submission handling using Formspree
 const initContactForm = () => {
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
 
     const showMessage = (message, type) => {
-        // Remove existing messages
         const existingMessage = document.querySelector('.form-message');
         if (existingMessage) existingMessage.remove();
-        
-        // Create new message
+
         const messageDiv = document.createElement('div');
         messageDiv.className = `form-message ${type}`;
         messageDiv.textContent = message;
         messageDiv.setAttribute('role', 'alert');
         messageDiv.setAttribute('aria-live', 'polite');
-        
+
         contactForm.appendChild(messageDiv);
-        
-        // Auto remove after 5 seconds
+
         setTimeout(() => {
-            if (messageDiv.parentNode) {
-                messageDiv.remove();
-            }
+            if (messageDiv.parentNode) messageDiv.remove();
         }, 5000);
     };
+
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitBtn = this.querySelector('input[type="submit"]');
+        const originalText = submitBtn.value;
+
+        submitBtn.value = 'Sending...';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(this);
+
+        try {
+            const response = await fetch(this.action, {
+                method: this.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                showMessage('Thank you! Your message has been sent.', 'success');
+                contactForm.reset();
+            } else {
+                showMessage('Oops! Something went wrong. Please try again.', 'error');
+            }
+        } catch (error) {
+            showMessage('Oops! Could not send message. Try again later.', 'error');
+        }
+
+        submitBtn.value = originalText;
+        submitBtn.disabled = false;
+    });
+};
+
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -234,6 +263,7 @@ window.addEventListener('resize', () => {
         document.body.style.overflow = '';
     }
 });
+
 
 
 
