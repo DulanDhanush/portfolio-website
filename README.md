@@ -23,8 +23,6 @@ This responsive and interactive portfolio website is designed to present persona
 - **Java & Node.js** – Backend project examples  
 - **SQL Server** – Database integration for projects
 
-  Link for the website: https://dulandhanush.github.io/portfolio-website/
-
 
 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -43,6 +41,8 @@ This responsive and interactive portfolio website is designed to present persona
 - **Responsive Design:** Works seamlessly across different screen sizes  
 - **Animations:** Elements appear with smooth fade-in effects using Intersection Observer  
 
+<h2>  Link for the website: https://dulandhanush.github.io/portfolio-website/
+</h2>
 ## 📸 Screenshots
 
 Desktop view:
