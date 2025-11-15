@@ -41,6 +41,8 @@ This responsive and interactive portfolio website is designed to present persona
 - **Responsive Design:** Works seamlessly across different screen sizes  
 - **Animations:** Elements appear with smooth fade-in effects using Intersection Observer  
 
+<h2>  Link for the website: https://dulandhanush.github.io/portfolio-website/
+</h2>
 ## 📸 Screenshots
 
 Desktop view:
