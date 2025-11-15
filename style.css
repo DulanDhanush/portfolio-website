@@ -246,6 +246,7 @@ section {
   cursor: pointer;
   text-align: center;
   min-height: 5rem;
+  text-decoration: none;
 }
 
 .btn:hover,
@@ -549,7 +550,7 @@ section {
   color: var(--main-color);
 }
 
-/* Projects Section */
+/* Projects Section - Fixed Buttons */
 .projects {
   background-color: var(--second-bg-color);
   padding: 12rem 6%;
@@ -641,21 +642,49 @@ section {
   flex-grow: 1;
 }
 
+/* Fixed Project Links - Improved Button Layout */
 .project-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1.2rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
 .project-links .btn {
   flex: 1;
   min-width: 140px;
+  max-width: 200px;
   text-align: center;
   font-size: 1.4rem;
-  padding: 1rem 2rem;
+  padding: 1.2rem 1.6rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Specific styles for different button types in projects */
+.project-links .btn.alt {
+  background: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.project-links .btn.alt:hover {
+  background: var(--main-color);
+  color: white;
+}
+
+/* Live Demo button style */
+.project-links .btn.live-demo {
+  background: linear-gradient(270deg, #10b981 10%, #059669 100%);
+  border: 2px solid #10b981;
+}
+
+.project-links .btn.live-demo:hover {
+  background: linear-gradient(270deg, #059669 10%, #047857 100%);
+  transform: translateY(-3px);
 }
 
 /* Contact Section */
@@ -989,6 +1018,18 @@ textarea:focus {
     height: auto;
     min-height: 450px;
   }
+
+  /* Project buttons responsive fix */
+  .project-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-links .btn {
+    min-width: 200px;
+    max-width: 250px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1086,6 +1127,17 @@ textarea:focus {
   .contact-text {
     font-size: 2.4rem;
   }
+
+  /* Project buttons mobile fix */
+  .project-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-links .btn {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1148,10 +1200,12 @@ textarea:focus {
 
   .project-links {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .project-links .btn {
     width: 100%;
+    max-width: 100%;
   }
 
   .skill-tags {
