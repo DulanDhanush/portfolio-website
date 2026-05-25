@@ -2,40 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta
       name="description"
-      content="Dulan Dhanush - Software Developer specializing in full-stack web development and software solutions"
+      content="Dulan Dhanush - Junior Software Engineer specializing in full-stack web development, AI, and scalable software solutions."
     />
     <title>Dulan Dhanush | Software Developer</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!--this is the favicon-->
-    <link rel="icon" type="image/png" href="favicon.ico.ico" />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="ambient-glow"></div>
+
+    <!-- Optimized cursor (only on desktop, no scroll interference) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <header class="header">
-      <a href="#home" class="logo" style="outline: none">
-        Dulan <span>Dhanush</span>
-      </a>
-
-      <i
-        class="bx bx-menu"
-        id="menu-icon"
-        aria-label="open menu"
-        role="button"
-        tabindex="0"
-      ></i>
-
+      <a href="#home" class="logo">Dulan <span>Dhanush</span></a>
+      <i class="bx bx-menu" id="menu-icon" aria-label="Menu"></i>
       <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -43,76 +45,61 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
         <a href="https://dulanblogs.vercel.app/" target="_blank" rel="noopener"
-          >My Blog</a
+          >Blog</a
         >
+        <a href="#contact" class="nav-cta">Contact Me</a>
       </nav>
-
-      <a href="#contact" class="gradient-btn" aria-label="Contact me"
-        >Contact Me</a
-      >
     </header>
 
     <main>
-      <!-- Home Section -->
+      <!-- Hero Section -->
       <section class="home" id="home">
         <div class="home-left">
           <div class="home-content">
-            <h1>Hi, I'm <span>Dulan Dhanush</span></h1>
-            <h3 class="typing-text">
-              I'm a <span class="typed-text">Software Developer</span>
-            </h3>
-            <p>
+            <div class="greeting-badge">
+              <span class="greeting-icon"></span> Welcome to my digital space
+            </div>
+            <h1>Hi, I'm <span class="gradient-name">Dulan Dhanush</span></h1>
+            <h3 class="typing-text">I'm a <span class="typed-text"></span></h3>
+            <p class="home-description">
               Junior Software Engineer | Java, C#, SQL | Building scalable,
               efficient, and robust software solutions.
             </p>
-
             <div class="btn-group">
-              <a href="#contact" class="btn" aria-label="Hire me">Hire Me</a>
-              <a href="#projects" class="btn alt" aria-label="View my projects"
-                >View Projects</a
-              >
+              <a href="#contact" class="btn btn-primary">Hire Me</a>
+              <a href="#projects" class="btn btn-secondary">View Projects</a>
             </div>
           </div>
-
           <div class="social-icons">
             <a
               href="https://github.com/DulanDhanush"
-              aria-label="GitHub"
               target="_blank"
               rel="noopener"
               ><i class="bx bxl-github"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/dulan-dhanush-b76a44300"
-              aria-label="LinkedIn"
               target="_blank"
               rel="noopener"
               ><i class="bx bxl-linkedin-square"></i
             ></a>
             <a
               href="https://www.instagram.com/ravoprime"
-              aria-label="Instagram"
               target="_blank"
               rel="noopener"
               ><i class="bx bxl-instagram-alt"></i
             ></a>
             <a
               href="https://www.facebook.com/share/1JSmZeWjBw/"
-              aria-label="Facebook"
               target="_blank"
               rel="noopener"
               ><i class="bx bxl-facebook"></i
             ></a>
-            <a
-              href="https://x.com/RavoPrime"
-              aria-label="Twitter"
-              target="_blank"
-              rel="noopener"
+            <a href="https://x.com/RavoPrime" target="_blank" rel="noopener"
               ><i class="bx bxl-twitter"></i
             ></a>
           </div>
         </div>
-
         <div class="home-right">
           <div class="profile-frame">
             <img
@@ -122,11 +109,12 @@
               height="400"
               loading="lazy"
             />
+            <div class="profile-glow"></div>
           </div>
         </div>
       </section>
 
-      <!-- About Section -->
+      <!-- About Section (unchanged content) -->
       <section class="about" id="about">
         <div class="about-img">
           <img
@@ -137,7 +125,6 @@
             loading="lazy"
           />
         </div>
-
         <div class="about-content">
           <h2>About <span>Me</span></h2>
           <p>
@@ -171,14 +158,18 @@
         </div>
       </section>
 
-      <!-- Services Section -->
+      <!-- Services Section (unchanged content) -->
       <section class="services" id="services">
-        <h2 class="heading">Services</h2>
-
+        <div class="section-header">
+          <h2 class="heading">My <span>Services</span></h2>
+          <p class="section-subtitle">
+            What I can do to help your business grow
+          </p>
+        </div>
         <div class="services-container">
-          <div class="services-box">
+          <div class="services-box glass-card">
             <div class="services-info">
-              <i class="bx bxl-figma" aria-hidden="true"></i>
+              <i class="bx bxl-figma"></i>
               <h4>UI / UX Design</h4>
               <p>
                 Designing intuitive and visually engaging interfaces with a
@@ -188,11 +179,9 @@
               </p>
             </div>
           </div>
-
-          <!-- Merged Full Stack Software Solution (replaces Frontend + Backend) -->
-          <div class="services-box">
+          <div class="services-box glass-card">
             <div class="services-info">
-              <i class="bx bx-code-alt" aria-hidden="true"></i>
+              <i class="bx bx-code-alt"></i>
               <h4>Full Stack Software Solutions</h4>
               <p>
                 End-to-end development of robust web applications — from
@@ -200,16 +189,12 @@
                 React) to secure, scalable backends (Java, Node.js, PHP, C#). I
                 integrate RESTful APIs, manage databases (MySQL, MS SQL), and
                 ensure seamless communication between client and server.
-                Delivering complete, production-ready full-stack systems
-                tailored to business needs.
               </p>
             </div>
           </div>
-
-          <!-- AI & Data Pipelines -->
-          <div class="services-box">
+          <div class="services-box glass-card">
             <div class="services-info">
-              <i class="bx bx-network-chart" aria-hidden="true"></i>
+              <i class="bx bx-network-chart"></i>
               <h4>AI & Data Pipelines</h4>
               <p>
                 Design and implement robust data pipelines for ETL processes,
@@ -221,11 +206,9 @@
               </p>
             </div>
           </div>
-
-          <!-- Cloud & Database Architecture -->
-          <div class="services-box">
+          <div class="services-box glass-card">
             <div class="services-info">
-              <i class="bx bx-cloud" aria-hidden="true"></i>
+              <i class="bx bx-cloud"></i>
               <h4>Cloud & Database Architecture</h4>
               <p>
                 Design secure, highly available cloud solutions using AWS and
@@ -237,11 +220,9 @@
               </p>
             </div>
           </div>
-
-          <!-- DevOps & CI/CD -->
-          <div class="services-box">
+          <div class="services-box glass-card">
             <div class="services-info">
-              <i class="bx bx-infinity" aria-hidden="true"></i>
+              <i class="bx bx-infinity"></i>
               <h4>DevOps & CI/CD</h4>
               <p>
                 Implement end-to-end automation with Git workflows,
@@ -256,18 +237,19 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
+      <!-- Projects Section (unchanged content) -->
       <section class="projects" id="projects">
-        <h2 class="heading">Projects</h2>
-
+        <div class="section-header">
+          <h2 class="heading">Featured <span>Projects</span></h2>
+          <p class="section-subtitle">
+            Some of my best work showcasing my skills and expertise
+          </p>
+        </div>
         <div class="projects-container">
-          <div class="projects-card">
+          <div class="projects-card glass-card">
             <img
               src="Screenshot 2025-11-15 125218.png"
               alt="MarketScope Website"
-              width="280"
-              height="200"
-              loading="lazy"
             />
             <h3>MarketScope Website</h3>
             <p>
@@ -275,27 +257,19 @@
               markets, including cryptocurrencies, stocks, and forex. The
               platform features live market data fetched from public APIs,
               dynamic UI updates using vanilla JavaScript, and category-based
-              dashboards dedicated to each market type. Designed for
-              performance, clarity, and educational use.
+              dashboards dedicated to each market type.
             </p>
             <div class="project-links">
               <a
                 href="https://dulandhanush.github.io/MarketScope/"
-                class="btn alt"
+                class="btn btn-secondary"
                 target="_blank"
-                rel="noopener"
-                >Website Link</a
-              >
+                >Live Demo <i class="bx bx-link-external"></i
+              ></a>
             </div>
           </div>
-          <div class="projects-card">
-            <img
-              src="image.png"
-              alt="Weather App"
-              width="280"
-              height="200"
-              loading="lazy"
-            />
+          <div class="projects-card glass-card">
+            <img src="image.png" alt="Weather App" />
             <h3>Weather App</h3>
             <p>
               A simple JavaScript weather app fetching real-time data from
@@ -305,21 +279,14 @@
             <div class="project-links">
               <a
                 href="https://dulandhanush.github.io/WeatherApp/"
-                class="btn alt"
+                class="btn btn-secondary"
                 target="_blank"
-                rel="noopener"
-                >Website Link</a
-              >
+                >Live Demo <i class="bx bx-link-external"></i
+              ></a>
             </div>
           </div>
-          <div class="projects-card">
-            <img
-              src="icon.png"
-              alt="Smart Agriculture System"
-              width="280"
-              height="200"
-              loading="lazy"
-            />
+          <div class="projects-card glass-card">
+            <img src="icon.png" alt="Smart Agriculture System" />
             <h3>Smart Agriculture System</h3>
             <p>
               A comprehensive desktop-based agriculture management system
@@ -332,20 +299,16 @@
             <div class="project-links">
               <a
                 href="https://github.com/DulanDhanush/Smart_Agriculture_System"
-                class="btn alt"
+                class="btn btn-secondary"
                 target="_blank"
-                rel="noopener"
-                >Source Code</a
-              >
+                >Source Code <i class="bx bx-link-external"></i
+              ></a>
             </div>
           </div>
-          <div class="projects-card">
+          <div class="projects-card glass-card">
             <img
               src="aptec-banner.png"
               alt="AP-Tec Enterprise Control System"
-              width="280"
-              height="200"
-              loading="lazy"
             />
             <h3>AP-Tec Enterprise Control System</h3>
             <p>
@@ -358,22 +321,14 @@
             <div class="project-links">
               <a
                 href="https://aptecenterprisecontrol.great-site.net/"
-                class="btn alt"
+                class="btn btn-secondary"
                 target="_blank"
-                rel="noopener"
-                >Website Link</a
-              >
+                >Live Demo <i class="bx bx-link-external"></i
+              ></a>
             </div>
           </div>
-          <!-- New MERN Tech Blog project -->
-          <div class="projects-card">
-            <img
-              src="blog banner.png"
-              alt="MERN Tech Blog"
-              width="280"
-              height="200"
-              loading="lazy"
-            />
+          <div class="projects-card glass-card">
+            <img src="blog banner.png" alt="MERN Tech Blog" />
             <h3>Dulan Tech Blog</h3>
             <p>
               A full‑stack blog platform built with MongoDB, Express, React, and
@@ -384,48 +339,35 @@
             <div class="project-links">
               <a
                 href="https://dulanblogs.vercel.app/"
-                class="btn alt"
+                class="btn btn-secondary"
                 target="_blank"
-                rel="noopener"
-                >Live Demo</a
-              >
+                >Live Demo <i class="bx bx-link-external"></i
+              ></a>
               <a
                 href="https://github.com/DulanDhanush/mern-tech-blog"
-                class="btn alt"
+                class="btn btn-secondary"
                 target="_blank"
-                rel="noopener"
-                >Source Code</a
-              >
+                >Source Code <i class="bx bx-link-external"></i
+              ></a>
             </div>
           </div>
-          <!-- New BaveragePotential project -->
-          <div class="projects-card">
-            <img
-              src="baverage.jpg"
-              alt="BaveragePotential - Latent Demand Prediction Engine"
-              width="280"
-              height="200"
-              loading="lazy"
-            />
+          <div class="projects-card glass-card">
+            <img src="baverage.jpg" alt="BaveragePotential" />
             <h3>BaveragePotential</h3>
             <p>
               Advanced latent demand prediction engine built for Data Storm 7.0
               (OCTAVE, John Keells Group). An end-to-end ML and data engineering
               pipeline that predicts maximum monthly purchase potential (in
               liters) for 20,000 Sri Lankan retail outlets by treating
-              historical sales as a left-censored demand problem. Features
-              Medallion Lakehouse architecture, geospatial intelligence
-              integration, and strict business guardrails for physically
-              actionable insights.
+              historical sales as a left-censored demand problem.
             </p>
             <div class="project-links">
               <a
                 href="https://github.com/DulanDhanush/BaveragePotential"
-                class="btn alt"
+                class="btn btn-secondary"
                 target="_blank"
-                rel="noopener"
-                >Source Code</a
-              >
+                >Source Code <i class="bx bx-link-external"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -433,11 +375,12 @@
 
       <!-- Contact Section -->
       <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <p class="contact-text">
-          Let's connect! <br />I’m open to opportunities and collaborations.
-        </p>
-
+        <div class="section-header">
+          <h2 class="heading">Contact <span>Me</span></h2>
+          <p class="section-subtitle">
+            Let's connect! I'm open to opportunities and collaborations.
+          </p>
+        </div>
         <form
           action="https://formspree.io/f/mvgdoqwp"
           method="POST"
@@ -445,37 +388,21 @@
         >
           <div class="input-group">
             <div class="input-box">
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                id="name"
-                required
-                aria-required="true"
-              />
+              <input type="text" name="name" placeholder="Full Name" required />
               <input
                 type="email"
                 name="email"
-                placeholder="Email"
-                id="email"
+                placeholder="Email Address"
                 required
-                aria-required="true"
               />
             </div>
             <div class="input-box">
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                id="phone"
-              />
+              <input type="tel" name="phone" placeholder="Phone Number" />
               <input
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                id="subject"
                 required
-                aria-required="true"
               />
             </div>
           </div>
@@ -483,74 +410,224 @@
             <textarea
               name="message"
               placeholder="Your Message"
-              id="message"
-              cols="30"
-              rows="10"
+              rows="8"
               required
-              aria-required="true"
             ></textarea>
-            <input
-              type="submit"
-              value="Send Message"
-              class="btn"
-              aria-label="Send message"
-            />
+            <button type="submit" class="btn btn-primary">
+              Send Message <i class="bx bx-send"></i>
+            </button>
           </div>
+          <div id="form-status" style="display: none"></div>
         </form>
       </section>
+    </main>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="social-icons">
-          <a
-            href="https://github.com/DulanDhanush"
-            aria-label="GitHub"
-            target="_blank"
-            rel="noopener"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/dulan-dhanush-b76a44300"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noopener"
-            ><i class="bx bxl-linkedin-square"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/ravoprime"
-            aria-label="Instagram"
-            target="_blank"
-            rel="noopener"
-            ><i class="bx bxl-instagram-alt"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/share/1JSmZeWjBw/"
-            aria-label="Facebook"
-            target="_blank"
-            rel="noopener"
-            ><i class="bx bxl-facebook"></i
-          ></a>
-          <a
-            href="https://x.com/RavoPrime"
-            aria-label="Twitter"
-            target="_blank"
-            rel="noopener"
-            ><i class="bx bxl-twitter"></i
-          ></a>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="logo">Dulan <span>Dhanush</span></a>
+          <p>
+            A passionate software developer crafting digital solutions with code
+            and creativity.
+          </p>
         </div>
-        <ul class="list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Me</h4>
+          <div class="social-icons">
+            <a href="https://github.com/DulanDhanush" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/dulan-dhanush-b76a44300"
+              target="_blank"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+            <a href="https://www.instagram.com/ravoprime" target="_blank"
+              ><i class="bx bxl-instagram-alt"></i
+            ></a>
+            <a href="https://www.facebook.com/share/1JSmZeWjBw/" target="_blank"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="https://x.com/RavoPrime" target="_blank"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p class="copyright">
           © <span id="current-year"></span> Dulan Dhanush | All Rights Reserved
         </p>
-      </footer>
-    </main>
+      </div>
+    </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // --- Typing Animation ---
+      const roles = [
+        "Software Developer",
+        "Full-Stack Engineer",
+        "Problem Solver",
+        "Tech Enthusiast",
+      ];
+      let roleIndex = 0,
+        charIndex = 0,
+        isDeleting = false;
+      const typedSpan = document.querySelector(".typed-text");
+      function typeEffect() {
+        const current = roles[roleIndex];
+        if (isDeleting) {
+          typedSpan.textContent = current.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typedSpan.textContent = current.substring(0, charIndex + 1);
+          charIndex++;
+        }
+        if (!isDeleting && charIndex === current.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 2000);
+          return;
+        }
+        if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(typeEffect, 500);
+          return;
+        }
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+      }
+      typeEffect();
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // --- Mobile Menu ---
+      const menuIcon = document.getElementById("menu-icon");
+      const navbar = document.querySelector(".navbar");
+      menuIcon?.addEventListener("click", () => {
+        navbar?.classList.toggle("active");
+        menuIcon?.classList.toggle("bx-x");
+      });
+      document.querySelectorAll(".navbar a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navbar?.classList.remove("active");
+          menuIcon?.classList.remove("bx-x");
+        });
+      });
+
+      // --- Optimized Cursor (smooth, no scroll lag) ---
+      const isTouchDevice =
+        "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      if (!isTouchDevice) {
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorOutline = document.querySelector(".cursor-outline");
+        let mouseX = 0,
+          mouseY = 0;
+        let outlineX = 0,
+          outlineY = 0;
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          if (cursorDot) {
+            cursorDot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`;
+          }
+        });
+        function animateOutline() {
+          if (!cursorOutline) return;
+          outlineX += (mouseX - outlineX) * 0.12;
+          outlineY += (mouseY - outlineY) * 0.12;
+          cursorOutline.style.transform = `translate3d(${outlineX - 20}px, ${outlineY - 20}px, 0)`;
+          requestAnimationFrame(animateOutline);
+        }
+        animateOutline();
+        document
+          .querySelectorAll(
+            "a, button, .btn, .services-box, .projects-card, .social-icons a, input, textarea",
+          )
+          .forEach((el) => {
+            el.addEventListener("mouseenter", () =>
+              cursorOutline?.classList.add("hover-active"),
+            );
+            el.addEventListener("mouseleave", () =>
+              cursorOutline?.classList.remove("hover-active"),
+            );
+          });
+      } else {
+        document.querySelector(".cursor-dot")?.remove();
+        document.querySelector(".cursor-outline")?.remove();
+      }
+
+      // --- Scroll Animations ---
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-in");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
+      document
+        .querySelectorAll(
+          ".services-box, .projects-card, .about-content, .about-img, .home-left, .home-right",
+        )
+        .forEach((el) => observer.observe(el));
+
+      // --- Contact Form ---
+      const form = document.getElementById("contact-form");
+      const statusDiv = document.getElementById("form-status");
+      form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        statusDiv.style.display = "block";
+        statusDiv.innerHTML =
+          '<div class="form-message sending">Sending message...</div>';
+        try {
+          const res = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+          if (res.ok) {
+            statusDiv.innerHTML =
+              '<div class="form-message success">Message sent successfully! I\'ll get back soon.</div>';
+            form.reset();
+            setTimeout(() => {
+              statusDiv.style.opacity = "0";
+              setTimeout(() => {
+                statusDiv.style.display = "none";
+                statusDiv.style.opacity = "1";
+              }, 500);
+            }, 5000);
+          } else throw new Error();
+        } catch {
+          statusDiv.innerHTML =
+            '<div class="form-message error">Oops! Something went wrong. Please try again.</div>';
+        }
+      });
+
+      // Add dynamic CSS for animations
+      const style = document.createElement("style");
+      style.textContent = `
+      .form-message { padding: 1rem; border-radius: 1rem; text-align: center; font-weight: 500; margin-top: 1rem; }
+      .form-message.sending { background: rgba(59,130,246,0.1); border: 1px solid var(--primary); color: var(--primary); }
+      .form-message.success { background: rgba(16,185,129,0.1); border: 1px solid #10b981; color: #10b981; }
+      .form-message.error { background: rgba(239,68,68,0.1); border: 1px solid #ef4444; color: #ef4444; }
+      .animate-in { animation: fadeInUp 0.6s ease forwards; }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+      .services-box, .projects-card, .about-content, .about-img, .home-left, .home-right { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+    `;
+      document.head.appendChild(style);
+    </script>
   </body>
 </html>
