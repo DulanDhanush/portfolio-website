@@ -27,7 +27,42 @@
     />
 
     <style>
-      /* Fix services grid layout - 3 columns default, 2 on tablet, 1 on mobile */
+      /* ---------- Global Mobile Optimization ---------- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 62.5%; /* 1rem = 10px */
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+
+      /* Responsive font scaling */
+      @media (max-width: 768px) {
+        html {
+          font-size: 55%;
+        }
+        body {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        html {
+          font-size: 50%;
+        }
+      }
+
+      /* Fix services grid layout */
       .services-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -35,16 +70,35 @@
         align-items: stretch;
       }
 
-      /* Fix project buttons centering */
+      /* Project buttons centering */
       .project-links {
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
 
-      /* Responsive adjustments */
+      /* Project card typography – optimized for vibe */
+      .projects-card h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .projects-card p {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        letter-spacing: -0.01em;
+      }
+
+      /* Responsive grid for services and projects */
       @media (max-width: 992px) {
         .services-container {
           grid-template-columns: repeat(2, 1fr);
@@ -52,8 +106,27 @@
       }
 
       @media (max-width: 768px) {
-        .services-container {
+        .services-container,
+        .projects-container {
           grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .projects-card {
+          padding: 2rem;
+        }
+
+        .projects-card h3 {
+          font-size: 1.8rem;
+        }
+
+        .projects-card p {
+          font-size: 1.3rem;
+        }
+
+        .project-links .btn-secondary {
+          padding: 1rem 1.6rem;
+          font-size: 1.3rem;
         }
       }
 
@@ -75,7 +148,7 @@
         flex-grow: 1;
       }
 
-      /* Star badge for all service cards (including DevOps) */
+      /* Star badge for all service cards */
       .services-box {
         position: relative;
         overflow: hidden;
@@ -126,6 +199,51 @@
         );
         border-top: 1px solid rgba(59, 130, 246, 0.15);
         margin-top: 2rem;
+      }
+
+      /* Mobile menu improvements */
+      @media (max-width: 992px) {
+        .navbar {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: rgba(10, 10, 15, 0.95);
+          backdrop-filter: blur(12px);
+          flex-direction: column;
+          padding: 2rem;
+          gap: 1.5rem;
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          transition: clip-path 0.4s ease;
+        }
+        .navbar.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .nav-cta {
+          display: inline-block;
+        }
+      }
+
+      /* Touch-friendly button sizes */
+      .btn,
+      .social-icons a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Prevent horizontal scroll */
+      section,
+      .container,
+      .footer {
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
       }
     </style>
 
@@ -314,7 +432,7 @@
         </div>
       </section>
 
-      <!-- Services Section (grid fixed to 3 columns) -->
+      <!-- Services Section -->
       <section class="services" id="services">
         <div class="section-header">
           <h2 class="heading">My <span>Services</span></h2>
@@ -378,7 +496,6 @@
           </div>
           <div class="services-box glass-card">
             <div class="services-info">
-              <!-- Fixed icon: replaced bx bx-infinity with bx bx-git-branch -->
               <i class="bx bx-git-branch"></i>
               <h4>DevOps & CI/CD</h4>
               <p>
@@ -394,7 +511,7 @@
         </div>
       </section>
 
-      <!-- Projects Section (buttons centered) -->
+      <!-- Projects Section (optimized fonts & mobile) -->
       <section class="projects" id="projects">
         <div class="section-header">
           <h2 class="heading">Featured <span>Projects</span></h2>
