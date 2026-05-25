@@ -27,40 +27,32 @@
     />
 
     <style>
-      /* ---------- Global Mobile Optimization ---------- */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      /* ===== TYPING ANIMATION FIX (mobile alignment) ===== */
+      .typing-wrapper {
+        display: inline-flex !important;
+        align-items: baseline;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        width: auto !important;
+        max-width: 100%;
       }
-
-      html {
-        scroll-behavior: smooth;
-        font-size: 62.5%; /* 1rem = 10px */
+      .static-text,
+      .typed-text {
+        display: inline-block;
+        white-space: nowrap;
       }
-
-      body {
-        font-family: "Inter", sans-serif;
-        font-size: 1.6rem;
-        line-height: 1.5;
-        overflow-x: hidden;
+      /* Ensure parent doesn't force wrap */
+      .home-content {
+        width: 100%;
       }
-
-      /* Responsive font scaling */
-      @media (max-width: 768px) {
-        html {
-          font-size: 55%;
-        }
-        body {
-          font-size: 1.5rem;
-        }
-      }
-
       @media (max-width: 480px) {
-        html {
-          font-size: 50%;
+        .typing-wrapper {
+          display: inline-flex !important;
+          white-space: nowrap !important;
+          overflow-x: visible;
         }
       }
+      /* All other styles remain exactly as before */
 
       /* Fix services grid layout */
       .services-container {
@@ -79,7 +71,7 @@
         margin-top: 1.5rem;
       }
 
-      /* Project card typography – optimized for vibe */
+      /* Project card typography */
       .projects-card h3 {
         font-family: "Space Grotesk", sans-serif;
         font-weight: 600;
@@ -98,7 +90,7 @@
         letter-spacing: -0.01em;
       }
 
-      /* Responsive grid for services and projects */
+      /* Responsive grid */
       @media (max-width: 992px) {
         .services-container {
           grid-template-columns: repeat(2, 1fr);
@@ -111,49 +103,42 @@
           grid-template-columns: 1fr;
           gap: 2rem;
         }
-
         .projects-card {
           padding: 2rem;
         }
-
         .projects-card h3 {
           font-size: 1.8rem;
         }
-
         .projects-card p {
           font-size: 1.3rem;
         }
-
         .project-links .btn-secondary {
           padding: 1rem 1.6rem;
           font-size: 1.3rem;
         }
       }
 
-      /* Ensure glass cards have consistent height */
+      /* Glass cards */
       .services-box,
       .projects-card {
         height: 100%;
         display: flex;
         flex-direction: column;
       }
-
       .services-info {
         flex: 1;
         display: flex;
         flex-direction: column;
       }
-
       .services-info p {
         flex-grow: 1;
       }
 
-      /* Star badge for all service cards */
+      /* Star badge for service cards */
       .services-box {
         position: relative;
         overflow: hidden;
       }
-
       .services-box::before {
         content: "★";
         position: absolute;
@@ -165,7 +150,6 @@
         font-family: monospace;
         pointer-events: none;
       }
-
       .services-box:hover::before {
         opacity: 1;
         transform: rotate(15deg);
@@ -180,14 +164,6 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        display: inline-block;
-      }
-
-      .typing-wrapper {
-        display: flex;
-        align-items: baseline;
-        flex-wrap: wrap;
-        gap: 0.5rem;
       }
 
       /* Section separation */
@@ -201,7 +177,7 @@
         margin-top: 2rem;
       }
 
-      /* Mobile menu improvements */
+      /* Mobile menu */
       @media (max-width: 992px) {
         .navbar {
           position: absolute;
@@ -224,7 +200,7 @@
         }
       }
 
-      /* Touch-friendly button sizes */
+      /* Touch-friendly buttons */
       .btn,
       .social-icons a {
         min-height: 44px;
@@ -240,7 +216,6 @@
       .footer {
         overflow-x: hidden;
       }
-
       img {
         max-width: 100%;
         height: auto;
@@ -251,7 +226,6 @@
   </head>
   <body>
     <div class="ambient-glow"></div>
-
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
@@ -292,31 +266,21 @@
             </div>
           </div>
           <div class="social-icons">
-            <a
-              href="https://github.com/DulanDhanush"
-              target="_blank"
-              rel="noopener"
+            <a href="https://github.com/DulanDhanush" target="_blank"
               ><i class="bx bxl-github"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/dulan-dhanush-b76a44300"
               target="_blank"
-              rel="noopener"
               ><i class="bx bxl-linkedin-square"></i
             ></a>
-            <a
-              href="https://www.instagram.com/ravoprime"
-              target="_blank"
-              rel="noopener"
+            <a href="https://www.instagram.com/ravoprime" target="_blank"
               ><i class="bx bxl-instagram-alt"></i
             ></a>
-            <a
-              href="https://www.facebook.com/share/1JSmZeWjBw/"
-              target="_blank"
-              rel="noopener"
+            <a href="https://www.facebook.com/share/1JSmZeWjBw/" target="_blank"
               ><i class="bx bxl-facebook"></i
             ></a>
-            <a href="https://x.com/RavoPrime" target="_blank" rel="noopener"
+            <a href="https://x.com/RavoPrime" target="_blank"
               ><i class="bx bxl-twitter"></i
             ></a>
           </div>
@@ -511,7 +475,7 @@
         </div>
       </section>
 
-      <!-- Projects Section (optimized fonts & mobile) -->
+      <!-- Projects Section -->
       <section class="projects" id="projects">
         <div class="section-header">
           <h2 class="heading">Featured <span>Projects</span></h2>
@@ -806,7 +770,7 @@
         });
       }
 
-      // Cursor Animation
+      // Cursor Animation (unchanged)
       const isTouchDevice =
         "ontouchstart" in window || navigator.maxTouchPoints > 0;
       if (!isTouchDevice) {
