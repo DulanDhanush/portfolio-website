@@ -36,7 +36,7 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Typography – refined for a modern, cohesive vibe */
+/* Modern Developer Typography */
 h1,
 h2,
 h3,
@@ -45,39 +45,37 @@ h4,
 .heading,
 .greeting-badge,
 .nav-cta,
-.btn {
-  font-family: "Syne", sans-serif;
+.btn,
+.static-text {
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-weight: 800;
+  font-weight: 700;
 }
-
 h2,
 .heading {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
-
 p,
 li,
 .skill-tag,
-.timeline-desc,
 .bio-text,
-.section-subtitle {
+.section-subtitle,
+.journey-card span {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--text-secondary);
 }
-
-/* Slightly heavier for emphasis */
 strong,
 b,
 .btn,
-.nav-cta {
+.nav-cta,
+.highlight {
   font-weight: 600;
 }
 
@@ -110,7 +108,7 @@ b,
   z-index: -1;
 }
 
-/* ==================== CURSOR ==================== */
+/* Cursor (unchanged, but kept) */
 .cursor-dot,
 .cursor-outline {
   pointer-events: none;
@@ -149,7 +147,7 @@ b,
   }
 }
 
-/* ==================== HEADER ==================== */
+/* Header (unchanged) */
 .header {
   position: fixed;
   top: 0;
@@ -235,7 +233,7 @@ b,
   }
 }
 
-/* ==================== BUTTONS ==================== */
+/* Buttons (unchanged) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -268,7 +266,7 @@ b,
   transform: translateY(-3px);
 }
 
-/* ==================== SECTION STYLES ==================== */
+/* Section Styles */
 section {
   padding: 10rem 6%;
 }
@@ -289,7 +287,7 @@ section {
   margin-top: 1rem;
 }
 
-/* ==================== HOME ==================== */
+/* Home Section (unchanged) */
 .home {
   min-height: 100vh;
   display: flex;
@@ -325,10 +323,17 @@ section {
   background-clip: text;
   color: transparent;
 }
-.typing-text {
+.typing-wrapper {
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 500;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.static-text {
+  color: var(--text-primary);
 }
 .typed-text {
   color: var(--primary);
@@ -399,7 +404,7 @@ section {
   }
 }
 
-/* ==================== REDESIGNED ABOUT SECTION (no image) ==================== */
+/* ==================== REDESIGNED ABOUT SECTION ==================== */
 .about {
   background: rgba(5, 10, 20, 0.5);
   padding: 8rem 6%;
@@ -418,8 +423,8 @@ section {
   color: var(--primary-light);
   padding: 0.4rem 1.2rem;
   border-radius: 2rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: "Space Grotesk", monospace;
   letter-spacing: 0.5px;
   margin-top: 1rem;
 }
@@ -433,34 +438,37 @@ section {
   line-height: 1.7;
   margin-bottom: 2rem;
 }
+.highlight {
+  color: var(--primary-light);
+  font-weight: 500;
+}
 .journey h3,
 .skills-showcase h3 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: var(--primary-light);
 }
-.timeline {
+.journey-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
-.timeline-item {
+.journey-card {
   display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
   background: rgba(255, 255, 255, 0.03);
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.2rem;
   border-radius: 1rem;
   border-left: 3px solid var(--primary);
 }
-.timeline-year {
-  font-weight: 700;
-  font-family: "Syne", sans-serif;
+.journey-card i {
+  font-size: 2rem;
   color: var(--primary);
-  min-width: 70px;
 }
-.timeline-desc {
+.journey-card span {
   font-size: 1.4rem;
+  color: var(--text-secondary);
 }
 .skill-tags.modern {
   display: flex;
@@ -485,42 +493,33 @@ section {
   background: rgba(59, 130, 246, 0.2);
   transform: translateY(-2px);
 }
-.focus-areas {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-.focus-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem 1.8rem;
-  border-radius: 2rem;
+.philosophy {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-  border: 1px solid var(--border-light);
+  background: rgba(59, 130, 246, 0.08);
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
 }
-.focus-card i {
+.philosophy i {
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--primary-light);
+  opacity: 0.7;
+}
+.philosophy p {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .timeline-item {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .timeline-year {
-    min-width: auto;
-  }
 }
 
-/* ==================== SERVICES & PROJECTS CARDS ==================== */
+/* Services & Projects Cards (unchanged) */
 .services-container,
 .projects-container {
   display: grid;
@@ -587,7 +586,7 @@ section {
   font-size: 1.3rem;
 }
 
-/* ==================== CONTACT ==================== */
+/* Contact Section (unchanged) */
 .contact {
   background: linear-gradient(135deg, rgba(5, 10, 20, 0.8), rgba(0, 0, 0, 0.4));
 }
@@ -630,7 +629,7 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
-/* ==================== FOOTER ==================== */
+/* Footer (unchanged) */
 .footer {
   background: rgba(5, 10, 20, 0.8);
   backdrop-filter: blur(12px);
@@ -681,7 +680,7 @@ textarea {
   color: var(--text-muted);
 }
 
-/* ==================== RESPONSIVE ==================== */
+/* Responsive (unchanged) */
 @media (max-width: 768px) {
   html {
     font-size: 55%;
