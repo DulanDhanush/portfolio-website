@@ -27,31 +27,60 @@
     />
 
     <style>
-      /* Additional fixes for services separation and card badges */
-      .services {
-        position: relative;
-        margin-bottom: 0;
-      }
-      .projects {
-        background: linear-gradient(
-          180deg,
-          rgba(5, 10, 20, 0.3) 0%,
-          rgba(5, 10, 20, 0.6) 100%
-        );
-        border-top: 1px solid rgba(59, 130, 246, 0.15);
-        position: relative;
-        margin-top: 2rem;
-      }
+      /* Fix services grid layout - 3 columns default, 2 on tablet, 1 on mobile */
       .services-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 2.5rem;
         align-items: stretch;
       }
+
+      /* Fix project buttons centering */
+      .project-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        .services-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .services-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Ensure glass cards have consistent height */
+      .services-box,
+      .projects-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .services-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .services-info p {
+        flex-grow: 1;
+      }
+
+      /* Star badge for all service cards (including DevOps) */
       .services-box {
         position: relative;
         overflow: hidden;
       }
+
       .services-box::before {
         content: "★";
         position: absolute;
@@ -63,37 +92,40 @@
         font-family: monospace;
         pointer-events: none;
       }
+
       .services-box:hover::before {
         opacity: 1;
         transform: rotate(15deg);
       }
-      .services-info {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-      .services-info p {
-        flex-grow: 1;
-      }
+
+      /* Typing animation font */
       .typed-text {
         font-family: "JetBrains Mono", "Fira Code", monospace;
         font-weight: 500;
         letter-spacing: -0.02em;
-        background: linear-gradient(
-          135deg,
-          var(--primary),
-          var(--primary-light)
-        );
+        background: linear-gradient(135deg, #3b82f6, #60a5fa);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         display: inline-block;
       }
+
       .typing-wrapper {
         display: flex;
         align-items: baseline;
         flex-wrap: wrap;
         gap: 0.5rem;
+      }
+
+      /* Section separation */
+      .projects {
+        background: linear-gradient(
+          180deg,
+          rgba(5, 10, 20, 0.3) 0%,
+          rgba(5, 10, 20, 0.6) 100%
+        );
+        border-top: 1px solid rgba(59, 130, 246, 0.15);
+        margin-top: 2rem;
       }
     </style>
 
@@ -282,7 +314,7 @@
         </div>
       </section>
 
-      <!-- Services Section (enhanced with badges and perfect alignment) -->
+      <!-- Services Section (grid fixed to 3 columns) -->
       <section class="services" id="services">
         <div class="section-header">
           <h2 class="heading">My <span>Services</span></h2>
@@ -346,7 +378,8 @@
           </div>
           <div class="services-box glass-card">
             <div class="services-info">
-              <i class="bx bx-infinity"></i>
+              <!-- Fixed icon: replaced bx bx-infinity with bx bx-git-branch -->
+              <i class="bx bx-git-branch"></i>
               <h4>DevOps & CI/CD</h4>
               <p>
                 Implement end-to-end automation with Git workflows,
@@ -361,7 +394,7 @@
         </div>
       </section>
 
-      <!-- Projects Section (with clear separation from services) -->
+      <!-- Projects Section (buttons centered) -->
       <section class="projects" id="projects">
         <div class="section-header">
           <h2 class="heading">Featured <span>Projects</span></h2>
@@ -596,7 +629,7 @@
     </footer>
 
     <script>
-      // ========== TYPING ANIMATION ==========
+      // Typing Animation
       const roles = [
         "Software Developer",
         "Full-Stack Engineer",
@@ -640,7 +673,7 @@
       document.getElementById("current-year").textContent =
         new Date().getFullYear();
 
-      // ========== MOBILE MENU ==========
+      // Mobile Menu
       const menuIcon = document.getElementById("menu-icon");
       const navbar = document.querySelector(".navbar");
       if (menuIcon && navbar) {
@@ -656,7 +689,7 @@
         });
       }
 
-      // ========== CURSOR ANIMATION ==========
+      // Cursor Animation
       const isTouchDevice =
         "ontouchstart" in window || navigator.maxTouchPoints > 0;
       if (!isTouchDevice) {
@@ -700,7 +733,7 @@
         document.querySelector(".cursor-outline")?.remove();
       }
 
-      // ========== SCROLL ANIMATIONS ==========
+      // Scroll Animations
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -721,7 +754,7 @@
           observer.observe(el);
         });
 
-      // ========== CONTACT FORM HANDLER ==========
+      // Contact Form
       const contactForm = document.getElementById("contact-form");
       const formStatus = document.getElementById("form-status");
       if (contactForm) {
