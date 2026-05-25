@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -25,6 +25,77 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <style>
+      /* Additional fixes for services separation and card badges */
+      .services {
+        position: relative;
+        margin-bottom: 0;
+      }
+      .projects {
+        background: linear-gradient(
+          180deg,
+          rgba(5, 10, 20, 0.3) 0%,
+          rgba(5, 10, 20, 0.6) 100%
+        );
+        border-top: 1px solid rgba(59, 130, 246, 0.15);
+        position: relative;
+        margin-top: 2rem;
+      }
+      .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        align-items: stretch;
+      }
+      .services-box {
+        position: relative;
+        overflow: hidden;
+      }
+      .services-box::before {
+        content: "★";
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 1.2rem;
+        color: var(--primary-light);
+        opacity: 0.5;
+        font-family: monospace;
+        pointer-events: none;
+      }
+      .services-box:hover::before {
+        opacity: 1;
+        transform: rotate(15deg);
+      }
+      .services-info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .services-info p {
+        flex-grow: 1;
+      }
+      .typed-text {
+        font-family: "JetBrains Mono", "Fira Code", monospace;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+      .typing-wrapper {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+    </style>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -114,7 +185,7 @@
         </div>
       </section>
 
-      <!-- About Section (Redesigned) -->
+      <!-- About Section -->
       <section class="about" id="about">
         <div class="about-container">
           <div class="about-header">
@@ -138,22 +209,22 @@
                   <div class="journey-card">
                     <i class="bx bx-code-block"></i>
                     <span
-                      >Java console apps, C# WinForms, PHP CRUD systems, SQL
-                      solutions</span
+                      >Built 6+ projects including full‑stack apps (PHP/MySQL),
+                      Java desktop systems, and API integrations</span
                     >
                   </div>
                   <div class="journey-card">
                     <i class="bx bx-book-open"></i>
                     <span
-                      >Currently learning: modern web dev (React), secure
-                      coding, DSA</span
+                      >Currently mastering: React, Node.js, advanced database
+                      design, and secure coding practices</span
                     >
                   </div>
                   <div class="journey-card">
-                    <i class="bx bx-bulb"></i>
+                    <i class="bx bx-trophy"></i>
                     <span
-                      >Interests: full-stack dev, cybersecurity, building
-                      practical projects</span
+                      >Data Storm 7.0 (John Keells Group) – developed an ML
+                      demand prediction engine</span
                     >
                   </div>
                 </div>
@@ -178,7 +249,25 @@
                 <span class="skill-tag"
                   ><i class="bx bxl-javascript"></i> JavaScript</span
                 >
+                <span class="skill-tag"
+                  ><i class="bx bxl-typescript"></i> TypeScript</span
+                >
+                <span class="skill-tag"
+                  ><i class="bx bxl-python"></i> Python</span
+                >
+                <span class="skill-tag"
+                  ><i class="bx bxl-react"></i> React</span
+                >
+                <span class="skill-tag"
+                  ><i class="bx bxl-nodejs"></i> Node.js</span
+                >
+                <span class="skill-tag"
+                  ><i class="bx bxl-mongodb"></i> MongoDB</span
+                >
                 <span class="skill-tag"><i class="bx bxl-git"></i> Git</span>
+                <span class="skill-tag"
+                  ><i class="bx bxl-docker"></i> Docker</span
+                >
                 <span class="skill-tag"><i class="bx bxl-aws"></i> AWS</span>
               </div>
               <div class="philosophy">
@@ -193,7 +282,7 @@
         </div>
       </section>
 
-      <!-- Services Section (unchanged) -->
+      <!-- Services Section (enhanced with badges and perfect alignment) -->
       <section class="services" id="services">
         <div class="section-header">
           <h2 class="heading">My <span>Services</span></h2>
@@ -272,7 +361,7 @@
         </div>
       </section>
 
-      <!-- Projects Section (unchanged content – your original projects) -->
+      <!-- Projects Section (with clear separation from services) -->
       <section class="projects" id="projects">
         <div class="section-header">
           <h2 class="heading">Featured <span>Projects</span></h2>
@@ -281,7 +370,6 @@
           </p>
         </div>
         <div class="projects-container">
-          <!-- Your project cards remain exactly as you provided -->
           <div class="projects-card glass-card">
             <img
               src="Screenshot 2025-11-15 125218.png"
@@ -507,7 +595,170 @@
       </div>
     </footer>
 
-    <!-- Your existing JavaScript (typing animation, menu, cursor, form, etc.) remains exactly the same -->
-    <!-- [Script content unchanged from your previous version] -->
+    <script>
+      // ========== TYPING ANIMATION ==========
+      const roles = [
+        "Software Developer",
+        "Full-Stack Engineer",
+        "Problem Solver",
+        "Tech Enthusiast",
+      ];
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typedTextSpan = document.querySelector(".typed-text");
+
+      function typeEffect() {
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+          typedTextSpan.textContent = currentRole.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typedTextSpan.textContent = currentRole.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 2000);
+          return;
+        }
+
+        if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(typeEffect, 500);
+          return;
+        }
+
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeEffect, speed);
+      }
+
+      if (typedTextSpan) typeEffect();
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // ========== MOBILE MENU ==========
+      const menuIcon = document.getElementById("menu-icon");
+      const navbar = document.querySelector(".navbar");
+      if (menuIcon && navbar) {
+        menuIcon.addEventListener("click", () => {
+          navbar.classList.toggle("active");
+          menuIcon.classList.toggle("bx-x");
+        });
+        document.querySelectorAll(".navbar a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            menuIcon.classList.remove("bx-x");
+          });
+        });
+      }
+
+      // ========== CURSOR ANIMATION ==========
+      const isTouchDevice =
+        "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      if (!isTouchDevice) {
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorOutline = document.querySelector(".cursor-outline");
+        let mouseX = 0,
+          mouseY = 0;
+        let outlineX = 0,
+          outlineY = 0;
+
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          if (cursorDot) {
+            cursorDot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`;
+          }
+        });
+
+        function animateOutline() {
+          if (!cursorOutline) return;
+          outlineX += (mouseX - outlineX) * 0.12;
+          outlineY += (mouseY - outlineY) * 0.12;
+          cursorOutline.style.transform = `translate3d(${outlineX - 20}px, ${outlineY - 20}px, 0)`;
+          requestAnimationFrame(animateOutline);
+        }
+        animateOutline();
+
+        const hoverElements = document.querySelectorAll(
+          "a, button, .btn, .services-box, .projects-card, .social-icons a, input, textarea",
+        );
+        hoverElements.forEach((el) => {
+          el.addEventListener("mouseenter", () =>
+            cursorOutline?.classList.add("hover-active"),
+          );
+          el.addEventListener("mouseleave", () =>
+            cursorOutline?.classList.remove("hover-active"),
+          );
+        });
+      } else {
+        document.querySelector(".cursor-dot")?.remove();
+        document.querySelector(".cursor-outline")?.remove();
+      }
+
+      // ========== SCROLL ANIMATIONS ==========
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-in");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
+
+      document
+        .querySelectorAll(
+          ".services-box, .projects-card, .about-grid, .home-left, .home-right",
+        )
+        .forEach((el) => {
+          observer.observe(el);
+        });
+
+      // ========== CONTACT FORM HANDLER ==========
+      const contactForm = document.getElementById("contact-form");
+      const formStatus = document.getElementById("form-status");
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(contactForm);
+          formStatus.style.display = "block";
+          formStatus.innerHTML =
+            '<div class="form-message sending">Sending message...</div>';
+
+          try {
+            const response = await fetch(contactForm.action, {
+              method: "POST",
+              body: formData,
+              headers: { Accept: "application/json" },
+            });
+
+            if (response.ok) {
+              formStatus.innerHTML =
+                '<div class="form-message success">Message sent successfully! I\'ll get back to you soon.</div>';
+              contactForm.reset();
+              setTimeout(() => {
+                formStatus.style.opacity = "0";
+                setTimeout(() => {
+                  formStatus.style.display = "none";
+                  formStatus.style.opacity = "1";
+                }, 500);
+              }, 5000);
+            } else {
+              throw new Error("Form submission failed");
+            }
+          } catch (error) {
+            formStatus.innerHTML =
+              '<div class="form-message error">Oops! Something went wrong. Please try again.</div>';
+          }
+        });
+      }
+    </script>
   </body>
 </html>
