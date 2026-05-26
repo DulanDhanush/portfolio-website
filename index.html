@@ -41,7 +41,6 @@
         display: inline-block;
         white-space: nowrap;
       }
-      /* Ensure parent doesn't force wrap */
       .home-content {
         width: 100%;
       }
@@ -209,6 +208,17 @@
         justify-content: center;
       }
 
+      /* X logo styling */
+      .x-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+        transition: fill 0.3s ease;
+      }
+      .social-icons a:hover .x-icon svg {
+        fill: white;
+      }
+
       /* Prevent horizontal scroll */
       section,
       .container,
@@ -237,7 +247,6 @@
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <!-- Changed from GitHub to Blog -->
         <a href="https://dulanblogs.vercel.app/" target="_blank" rel="noopener"
           >Blog</a
         >
@@ -290,9 +299,26 @@
               rel="noopener"
               ><i class="bx bxl-facebook"></i
             ></a>
-            <a href="https://x.com/RavoPrime" target="_blank" rel="noopener"
-              ><i class="bx bxl-twitter"></i
-            ></a>
+            <!-- Updated Twitter icon to modern X logo -->
+            <a
+              href="https://x.com/RavoPrime"
+              target="_blank"
+              rel="noopener"
+              aria-label="X (Twitter)"
+            >
+              <span class="x-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
         <div class="home-right">
@@ -706,9 +732,26 @@
             <a href="https://www.facebook.com/share/1JSmZeWjBw/" target="_blank"
               ><i class="bx bxl-facebook"></i
             ></a>
-            <a href="https://x.com/RavoPrime" target="_blank"
-              ><i class="bx bxl-twitter"></i
-            ></a>
+            <!-- Updated Twitter icon to X logo in footer -->
+            <a
+              href="https://x.com/RavoPrime"
+              target="_blank"
+              rel="noopener"
+              aria-label="X (Twitter)"
+            >
+              <span class="x-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -780,7 +823,7 @@
         });
       }
 
-      // Cursor Animation (unchanged)
+      // Cursor Animation
       const isTouchDevice =
         "ontouchstart" in window || navigator.maxTouchPoints > 0;
       if (!isTouchDevice) {
