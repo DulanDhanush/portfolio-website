@@ -25,7 +25,7 @@ This portfolio website is a **single‑page, fully responsive** showcase of my w
 
 The design follows a **modern blue theme** with glass‑morphism cards, smooth hover effects, and a layout that adapts seamlessly to desktops, tablets, and mobile devices. All content is directly sourced from my GitHub profile and real experience – no placeholder data.
 
-> 🔗 **Live Demo**: [dulandhanush.dev](https://your-portfolio-url.com) _(replace with actual URL when deployed)_
+> 🔗 **Live Demo**: [dulandhanush.dev](https://dulandhanush.github.io/portfolio-website/) _(replace with actual URL when deployed)_
 
 ---
 
