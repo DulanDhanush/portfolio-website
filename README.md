@@ -57,53 +57,53 @@ No backend is required – the contact form is handled by Formspree’s service.
 
 ### 🏠 Hero Section
 
-- Animated gradient greeting badge.
+    - Animated gradient greeting badge.
 
-- Role typing animation (“I'm a Software Developer”, “Full‑Stack Engineer”, etc.).
+    - Role typing animation (“I'm a Software Developer”, “Full‑Stack Engineer”, etc.).
 
-- Call‑to‑action buttons (Hire Me / View Projects).
+    - Call‑to‑action buttons (Hire Me / View Projects).
 
-- Social media links (GitHub, LinkedIn, Instagram, Facebook, X) with hover effects.
+    - Social media links (GitHub, LinkedIn, Instagram, Facebook, X) with hover effects.
 
 ### 🙋 About Me
 
-- Modern, image‑less redesign: personal bio, journey cards, and a technical skills grid.
+    - Modern, image‑less redesign: personal bio, journey cards, and a technical skills grid.
 
-- Skills displayed as interactive tags (Java, C#, PHP, SQL, React, Node.js, Docker, AWS, and more).
+    - Skills displayed as interactive tags (Java, C#, PHP, SQL, React, Node.js, Docker, AWS, and more).
 
-- “Philosophy” quote highlighting core engineering principles.
+    - “Philosophy” quote highlighting core engineering principles.
 
 ### 🛠️ Services
 
-- Five service cards (UI/UX, Full Stack, AI & Data Pipelines, Cloud & Database Arch, DevOps & CI/CD).
+    - Five service cards (UI/UX, Full Stack, AI & Data Pipelines, Cloud & Database Arch, DevOps & CI/CD).
 
-- Glass‑morphism cards with star badge and smooth hover lift.
+    - Glass‑morphism cards with star badge and smooth hover lift.
 
-- Responsive 3‑column grid (desktop) → 2 columns (tablet) → 1 column (mobile).
+    - Responsive 3‑column grid (desktop) → 2 columns (tablet) → 1 column (mobile).
 
 ### 📁 Projects
 
-- Showcase of real projects with screenshots, descriptions, and live demo / source code links.
+    - Showcase of real projects with screenshots, descriptions, and live demo / source code links.
 
-- Projects include: MarketScope, Weather App, Smart Agriculture System, AP‑Tec Enterprise, Dulan Tech Blog, BaveragePotential.
+    - Projects include: MarketScope, Weather App, Smart Agriculture System, AP‑Tec Enterprise, Dulan Tech Blog, BaveragePotential.
 
-- Buttons are centered and consistent across cards.
+    - Buttons are centered and consistent across cards.
 
 ### 📬 Contact
 
-- Integrated with Formspree (no backend needed).
+    - Integrated with Formspree (no backend needed).
 
-- Input validation and real‑time feedback (sending / success / error messages).
+    - Input validation and real‑time feedback (sending / success / error messages).
 
-- Fully responsive form layout.
+    - Fully responsive form layout.
 
 ### 🖱️ Interactive Enhancements
 
-- Custom cursor (dot + outline) – smooth, no scroll lag, disables on touch devices.
+    - Custom cursor (dot + outline) – smooth, no scroll lag, disables on touch devices.
 
-- Scroll‑triggered animations (fade + slide‑up) for cards and sections.
+    - Scroll‑triggered animations (fade + slide‑up) for cards and sections.
 
-- Mobile‑friendly hamburger menu with smooth transition.
+    - Mobile‑friendly hamburger menu with smooth transition.
 
 ---
 
