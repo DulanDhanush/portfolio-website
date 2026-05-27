@@ -207,4 +207,4 @@ The portfolio is completely static – you can host it anywhere:
 
 ## 📄 License
 
-## This project is open source and available under the MIT License.
+This project is open source and available under the MIT License.
